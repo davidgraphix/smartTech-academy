@@ -15,13 +15,13 @@ const courses = [
     id: "frontend",
     title: "Frontend Development",
     description:
-      "Master React, Next.js, TypeScript, and modern frontend technologies",
+      "Master React, JavaScript, TypeScript, and modern frontend technologies",
     icon: Code,
     originalPrice: "₦200,000",
     discountedPrice: "₦150,000",
     discount: "25% OFF",
     features: [
-      "React & Next.js",
+      "React & JavaScript",
       "TypeScript",
       "Tailwind CSS",
       "State Management",
@@ -39,7 +39,7 @@ const courses = [
     discountedPrice: "₦350,000",
     discount: "22% OFF",
     features: [
-      "Node.js & Express",
+      "C# (CSharp) & .NET",
       "Database Design",
       "API Development",
       "Cloud Deployment",
@@ -62,7 +62,7 @@ const courses = [
       "Authentication",
       "Production Deployment",
     ],
-    duration: "20 weeks",
+    duration: "24 weeks",
     popular: true,
     gradient: "from-purple-500 to-pink-400",
   },
@@ -112,11 +112,11 @@ export function CoursesSection() {
             return (
               <Card
                 key={course.id}
-                className={`relative overflow-hidden rounded-2xl border-0 bg-gradient-to-br ${course.gradient} p-[2px] transition-all`}
+                className={`relative overflow-hidden rounded-2xl border-0 bg-gradient-to-br ${course.gradient} p-[2px]  hover-lift transition-all`}
               >
-                <div className="bg-gray-900 rounded-2xl h-full w-full p-6 flex flex-col justify-between">
+                <div className="bg-gray-900 rounded-2xl h-full w-full p-6 flex flex-col justify-between ">
                   {course.popular && (
-                    <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-pink-500 to-purple-500 text-white shadow-lg">
+                    <Badge className="absolute -top-0.5 left-1/2 -translate-x-1/2 bg-gradient-to-r animate-pulse from-pink-500 to-purple-500 text-white shadow-lg">
                       Most Popular
                     </Badge>
                   )}

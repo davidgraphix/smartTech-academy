@@ -23,7 +23,6 @@ export const metadata: Metadata = {
   title: "SmartTech Academy - Professional Tech Skills Training",
   description:
     "Learn Frontend, Backend, Fullstack Development & UI/UX Design with job-ready training, mentorship, and career support.",
-  generator: "v0.app",
 }
 
 export default function RootLayout({

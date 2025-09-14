@@ -16,8 +16,8 @@ export default function HomePage() {
         <main>
           <HeroSection />
           <DiscountBanner />
-          <BenefitsSection />
           <CoursesSection />
+          <BenefitsSection />
           <TestimonialsSection />
         </main>
         <Footer />
