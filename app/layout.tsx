@@ -5,6 +5,7 @@ import { Orbitron } from "next/font/google"
 import { Fira_Code } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import WhatsAppButton from "@/components/WhatsAppButton"
 
 
 const orbitron = Orbitron({
@@ -33,7 +34,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${orbitron.variable} ${firaCode.variable}`}>
       <body className="font-sans antialiased bg-black text-white min-h-screen">
-        <Suspense fallback={null}>{children}</Suspense>
+        <Suspense fallback={null}>{children}
+          <WhatsAppButton />
+        </Suspense>
         <Analytics />
       </body>
     </html>
