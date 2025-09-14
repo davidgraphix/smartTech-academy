@@ -13,12 +13,12 @@ import { Badge } from "@/components/ui/badge";
 import { Code, Server, Layers, Palette, CheckCircle } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-const courses = [
+const courses = [ 
   {
     id: "frontend",
     title: "Frontend Development",
     description:
-      "Master React, JavaScript, TypeScript, and modern frontend technologies",
+      "Master HTML, CSS, JavaScript, Bootstrap, and React to build modern, responsive websites and applications.",
     icon: Code,
     originalPrice: "₦200,000",
     discountedPrice: "₦150,000",
@@ -34,16 +34,16 @@ const courses = [
   },
   {
     id: "backend",
-    title: "Backend Development",
+    title: "Backend Development (C# & .NET)",
     description:
-      "Build scalable APIs with Node.js, databases, and cloud deployment",
+      "Learn backend engineering with C#, .NET, and MSSQL. Build scalable APIs, database-driven applications, and deploy to the cloud.",
     icon: Server,
     originalPrice: "₦450,000",
     discountedPrice: "₦350,000",
     discount: "22% OFF",
     features: [
       "C# (CSharp) & .NET",
-      "Database Design",
+      "MSSQL Database Design",
       "API Development",
       "Cloud Deployment",
     ],
@@ -54,16 +54,16 @@ const courses = [
     id: "fullstack",
     title: "Fullstack Development",
     description:
-      "Complete web development from frontend to backend and deployment",
+      "Become a complete developer by combining React (frontend) with C#/.NET (backend) and MSSQL database integration.",
     icon: Layers,
     originalPrice: "₦500,000",
     discountedPrice: "₦450,000",
     discount: "10% OFF",
     features: [
-      "Full Web Stack",
-      "Database Integration",
-      "Authentication",
-      "Production Deployment",
+      "React & TypeScript",
+      "C# & .NET Backend",
+      "MSSQL Integration",
+      "Authentication & Deployment",
     ],
     duration: "24 weeks",
     popular: true,
@@ -73,7 +73,7 @@ const courses = [
     id: "uiux",
     title: "UI/UX Design (Figma)",
     description:
-      "Design beautiful, user-friendly interfaces with industry-standard tools",
+      "Design beautiful, user-friendly interfaces with industry-standard tools.",
     icon: Palette,
     originalPrice: "₦120,000",
     discountedPrice: "₦95,000",
@@ -88,6 +88,7 @@ const courses = [
     gradient: "from-orange-500 to-yellow-400",
   },
 ];
+
 
 export function CoursesSection() {
   const router = useRouter();

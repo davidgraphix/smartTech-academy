@@ -1,22 +1,45 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Checkbox } from "@/components/ui/checkbox"
-import { ArrowLeft, CheckCircle, Code, Palette, Server, Layers, Zap, Star, Clock, Users } from "lucide-react"
-import { useRouter } from "next/navigation"
-import { useState } from "react"
-import { LiveBackground } from "@/components/live-background"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
+import {
+  ArrowLeft,
+  CheckCircle,
+  Code,
+  Palette,
+  Server,
+  Layers,
+  Zap,
+  Star,
+  Clock,
+  Users,
+} from "lucide-react";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { LiveBackground } from "@/components/live-background";
 
 export default function EnrollPage() {
-  const router = useRouter()
-  const [selectedCourse, setSelectedCourse] = useState("")
+  const router = useRouter();
+  const [selectedCourse, setSelectedCourse] = useState("");
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -25,7 +48,7 @@ export default function EnrollPage() {
     experience: "",
     goals: "",
     agreeToTerms: false,
-  })
+  });
 
   const courses = [
     {
@@ -36,19 +59,33 @@ export default function EnrollPage() {
       originalPrice: "₦200,000",
       duration: "3 months",
       level: "Beginner to Advanced",
-      description: "Master React, JavaScript, TypeScript, and modern frontend technologies",
-      features: ["React & JavaScript", "TypeScript", "Tailwind CSS", "State Management", "API Integration"],
+      description:
+        "Master React, JavaScript, TypeScript, and modern frontend technologies.",
+      features: [
+        "React & JavaScript",
+        "TypeScript",
+        "Tailwind CSS",
+        "State Management",
+        "API Integration",
+      ],
     },
     {
       id: "backend",
-      title: "Backend Development",
+      title: "Backend Development (C# & .NET)",
       icon: Server,
       price: "₦350,000",
       originalPrice: "₦450,000",
       duration: "4 months",
       level: "Beginner to Advanced",
-      description: "Build scalable APIs with C# .NET, databases, and cloud deployment",
-      features: ["Node.js & Express", "Database Design", "API Development", "Authentication", "Cloud Deployment"],
+      description:
+        "Learn backend engineering with C#, .NET, and MSSQL. Build scalable APIs, manage databases, and deploy to the cloud.",
+      features: [
+        "C# (CSharp) & .NET",
+        "MSSQL Database Design",
+        "API Development",
+        "Authentication",
+        "Cloud Deployment",
+      ],
     },
     {
       id: "fullstack",
@@ -58,34 +95,44 @@ export default function EnrollPage() {
       originalPrice: "₦500,000",
       duration: "6 months",
       level: "Intermediate to Advanced",
-      description: "Complete web development from frontend to backend and deployment",
+      description:
+        "Combine React (frontend) with C#/.NET (backend) and MSSQL to become a complete fullstack developer.",
       features: [
-        "Full MERN Stack",
-        "Database Integration",
-        "DevOps Basics",
-        "Project Management",
+        "React & TypeScript",
+        "C# & .NET Backend",
+        "MSSQL Integration",
+        "Authentication & Deployment",
         "Portfolio Development",
       ],
     },
     {
       id: "uiux",
-      title: "UI/UX Design",
+      title: "UI/UX Design (Figma)",
       icon: Palette,
       price: "₦95,000",
       originalPrice: "₦120,000",
       duration: "2.5 months",
       level: "Beginner to Advanced",
-      description: "Design beautiful, user-friendly interfaces and experiences",
-      features: ["Design Principles", "Figma Mastery", "User Research", "Prototyping", "Design Systems"],
+      description:
+        "Design beautiful, user-friendly interfaces and experiences with Figma.",
+      features: [
+        "Design Principles",
+        "Figma Mastery",
+        "User Research",
+        "Prototyping",
+        "Design Systems",
+      ],
     },
-  ]
+  ];
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle form submission
-    console.log("Form submitted:", { ...formData, selectedCourse })
-    alert("Enrollment submitted successfully! We'll contact you within 24 hours.")
-  }
+    console.log("Form submitted:", { ...formData, selectedCourse });
+    alert(
+      "Enrollment submitted successfully! We'll contact you within 24 hours."
+    );
+  };
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
@@ -114,30 +161,40 @@ export default function EnrollPage() {
           <div className="max-w-6xl mx-auto">
             {/* Page Header */}
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-6xl font-bold text-gradient mb-6">Start Your Tech Journey Today</h1>
+              <h1 className="text-4xl md:text-6xl font-bold text-gradient mb-6">
+                Start Your Tech Journey Today
+              </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose your course and take the first step towards a successful tech career with expert mentorship and
-                job-ready training.
+                Choose your course and take the first step towards a successful
+                tech career with expert mentorship and job-ready training.
               </p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Course Selection */}
               <div>
-                <h2 className="text-3xl font-bold text-white mb-8">Choose Your Course</h2>
+                <h2 className="text-3xl font-bold text-white mb-8">
+                  Choose Your Course
+                </h2>
                 <div className="space-y-6">
                   {courses.map((course) => {
-                    const Icon = course.icon
+                    const Icon = course.icon;
                     return (
                       <Card
                         key={course.id}
-                        className={`glass-morphism border-2 transition-all duration-300 hover-lift cursor-pointer ${
+                        className={`glass-morphism transition-all duration-300 hover-lift cursor-pointer relative ${
                           selectedCourse === course.id
-                            ? "border-cyan-400 bg-cyan-400/5"
-                            : "border-gray-700 hover:border-cyan-400/50"
+                            ? "border-4 border-cyan-400 bg-cyan-400/5"
+                            : "border-2 border-gray-700 hover:border-cyan-400/50"
                         }`}
                         onClick={() => setSelectedCourse(course.id)}
                       >
+                        {/* Tick icon when selected */}
+                        {selectedCourse === course.id && (
+                          <div className="absolute top-3 right-3 bg-cyan-400 rounded-full p-1 shadow-lg">
+                            <CheckCircle className="h-5 w-5 text-white" />
+                          </div>
+                        )}
                         <CardHeader>
                           <div className="flex items-center justify-between">
                             <div className="flex items-center gap-4">
@@ -145,18 +202,28 @@ export default function EnrollPage() {
                                 <Icon className="h-6 w-6 text-cyan-400" />
                               </div>
                               <div>
-                                <CardTitle className="text-white text-xl">{course.title}</CardTitle>
-                                <CardDescription className="text-gray-400">{course.level}</CardDescription>
+                                <CardTitle className="text-white text-xl">
+                                  {course.title}
+                                </CardTitle>
+                                <CardDescription className="text-gray-400">
+                                  {course.level}
+                                </CardDescription>
                               </div>
                             </div>
                             <div className="text-right">
-                              <div className="text-2xl font-bold text-gradient">{course.price}</div>
-                              <div className="text-sm text-gray-500 line-through">{course.originalPrice}</div>
+                              <div className="text-2xl font-bold text-gradient">
+                                {course.price}
+                              </div>
+                              <div className="text-sm text-gray-500 line-through">
+                                {course.originalPrice}
+                              </div>
                             </div>
                           </div>
                         </CardHeader>
                         <CardContent>
-                          <p className="text-gray-300 mb-4">{course.description}</p>
+                          <p className="text-gray-300 mb-4">
+                            {course.description}
+                          </p>
                           <div className="flex items-center gap-6 mb-4 text-sm text-gray-400">
                             <div className="flex items-center gap-1">
                               <Clock className="h-4 w-4" />
@@ -173,14 +240,17 @@ export default function EnrollPage() {
                           </div>
                           <div className="flex flex-wrap gap-2">
                             {course.features.map((feature, index) => (
-                              <span key={index} className="px-3 py-1 bg-cyan-400/10 text-cyan-400 rounded-full text-sm">
+                              <span
+                                key={index}
+                                className="px-3 py-1 bg-cyan-400/10 text-cyan-400 rounded-full text-sm"
+                              >
                                 {feature}
                               </span>
                             ))}
                           </div>
                         </CardContent>
                       </Card>
-                    )
+                    );
                   })}
                 </div>
               </div>
@@ -207,7 +277,12 @@ export default function EnrollPage() {
                           <Input
                             id="firstName"
                             value={formData.firstName}
-                            onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                            onChange={(e) =>
+                              setFormData({
+                                ...formData,
+                                firstName: e.target.value,
+                              })
+                            }
                             className="glass-morphism border-gray-600 text-white"
                             required
                           />
@@ -219,7 +294,12 @@ export default function EnrollPage() {
                           <Input
                             id="lastName"
                             value={formData.lastName}
-                            onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                            onChange={(e) =>
+                              setFormData({
+                                ...formData,
+                                lastName: e.target.value,
+                              })
+                            }
                             className="glass-morphism border-gray-600 text-white"
                             required
                           />
@@ -234,7 +314,9 @@ export default function EnrollPage() {
                           id="email"
                           type="email"
                           value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                          onChange={(e) =>
+                            setFormData({ ...formData, email: e.target.value })
+                          }
                           className="glass-morphism border-gray-600 text-white"
                           required
                         />
@@ -248,7 +330,9 @@ export default function EnrollPage() {
                           id="phone"
                           type="tel"
                           value={formData.phone}
-                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                          onChange={(e) =>
+                            setFormData({ ...formData, phone: e.target.value })
+                          }
                           className="glass-morphism border-gray-600 text-white"
                           required
                         />
@@ -260,15 +344,23 @@ export default function EnrollPage() {
                         </Label>
                         <Select
                           value={formData.experience}
-                          onValueChange={(value) => setFormData({ ...formData, experience: value })}
+                          onValueChange={(value) =>
+                            setFormData({ ...formData, experience: value })
+                          }
                         >
                           <SelectTrigger className="glass-morphism border-gray-600 text-white">
                             <SelectValue placeholder="Select your experience level" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="beginner">Complete Beginner</SelectItem>
-                            <SelectItem value="some">Some Experience</SelectItem>
-                            <SelectItem value="intermediate">Intermediate</SelectItem>
+                            <SelectItem value="beginner">
+                              Complete Beginner
+                            </SelectItem>
+                            <SelectItem value="some">
+                              Some Experience
+                            </SelectItem>
+                            <SelectItem value="intermediate">
+                              Intermediate
+                            </SelectItem>
                             <SelectItem value="advanced">Advanced</SelectItem>
                           </SelectContent>
                         </Select>
@@ -281,7 +373,9 @@ export default function EnrollPage() {
                         <Textarea
                           id="goals"
                           value={formData.goals}
-                          onChange={(e) => setFormData({ ...formData, goals: e.target.value })}
+                          onChange={(e) =>
+                            setFormData({ ...formData, goals: e.target.value })
+                          }
                           placeholder="Tell us about your career goals and what you hope to achieve..."
                           className="glass-morphism border-gray-600 text-white"
                           rows={4}
@@ -292,9 +386,17 @@ export default function EnrollPage() {
                         <Checkbox
                           id="terms"
                           checked={formData.agreeToTerms}
-                          onCheckedChange={(checked) => setFormData({ ...formData, agreeToTerms: checked as boolean })}
+                          onCheckedChange={(checked) =>
+                            setFormData({
+                              ...formData,
+                              agreeToTerms: checked as boolean,
+                            })
+                          }
                         />
-                        <Label htmlFor="terms" className="text-sm text-gray-300">
+                        <Label
+                          htmlFor="terms"
+                          className="text-sm text-gray-300"
+                        >
                           I agree to the terms and conditions and privacy policy
                         </Label>
                       </div>
@@ -316,5 +418,5 @@ export default function EnrollPage() {
         </main>
       </div>
     </div>
-  )
+  );
 }
