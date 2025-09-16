@@ -59,7 +59,7 @@ export function TestimonialsSection() {
             What Our <span className="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">Students Say</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Join hundreds of successful graduates who transformed their careers with SmartTech Academy
+            Join hundreds of successful graduates who transformed their careers with DSmartTech Academy
           </p>
         </div>
 

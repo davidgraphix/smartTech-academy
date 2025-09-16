@@ -15,7 +15,7 @@ export function Footer() {
               <Code2 className="h-5 w-5 text-white" />
             </div>
             <h3 className="text-2xl font-bold text-primary text-white font-bold">
-              SmartTech Academy
+              DSmartTech Academy
             </h3>
            </div>
             <p className="text-background/80">

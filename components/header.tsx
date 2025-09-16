@@ -42,7 +42,7 @@ export function Header() {
               <Code2 className="h-6 w-6 text-white" />
             </div>
             <h1 className="text-2xl font-bold text-white group-hover:text-gradient group-hover:animate-neon-flicker">
-              SmartTech Academy
+              DSmartTech Academy
             </h1>
           </div>
 
