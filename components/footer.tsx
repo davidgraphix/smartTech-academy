@@ -25,20 +25,20 @@ export function Footer() {
             <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <MessageCircle className="h-4 w-4" />
-                <Link href="">
+                <Link href="https://wa.me/+234911754 2774">
                   <span className="text-sm">WhatsApp Business</span>
                 </Link>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <Link href="mailto:bamideledavidsmart40@gmail.com">
-                  <span className="text-sm">info@smarttechacademy.com</span>
+                <Link href="mailto:dsmarttechacademy@gmail.com">
+                  <span className="text-sm">dsmarttechacademy@gmail.com</span>
                 </Link>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <Link href="phone:+2349035177568">
-                  <span className="text-sm">+234 (9) 035 177 568</span>
+                <Link href="phone:+2348160499031">
+                  <span className="text-sm">+234 (8) 160 499 031</span>
                 </Link>
               </div>
             </div>
@@ -49,22 +49,22 @@ export function Footer() {
             <h4 className="text-lg font-bold">Courses</h4>
             <ul className="space-y-2 text-background/80">
               <li>
-                <a href="#" className="hover:text-secondary transition-colors">
+                <a href="/enroll" className="hover:text-secondary transition-colors">
                   Frontend Development
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-secondary transition-colors">
+                <a href="/enroll" className="hover:text-secondary transition-colors">
                   Backend Development
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-secondary transition-colors">
+                <a href="/enroll" className="hover:text-secondary transition-colors">
                   Fullstack Development
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-secondary transition-colors">
+                <a href="/enroll" className="hover:text-secondary transition-colors">
                   UI/UX Design
                 </a>
               </li>
