@@ -125,14 +125,31 @@ export default function EnrollPage() {
     },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", { ...formData, selectedCourse });
-    alert(
-      "Enrollment submitted successfully! We'll contact you within 24 hours."
-    );
-  };
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    const res = await fetch("/api/enroll", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ...formData, selectedCourse }),
+    });
+
+    if (res.ok) {
+      // ✅ Email sent, now open WhatsApp
+      const whatsappMessage = `Hello, I just enrolled for the ${selectedCourse} course.\n\nMy details:\nName: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nPhone: ${formData.phone}`;
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+
+      window.location.href = `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=${encodedMessage}`;
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  } catch (err) {
+    console.error(err);
+    alert("Error submitting enrollment.");
+  }
+};
+
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
