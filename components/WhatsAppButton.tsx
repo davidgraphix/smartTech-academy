@@ -12,7 +12,7 @@ export default function WhatsAppButton() {
   }
 
   const openWhatsApp = () => {
-    const phoneNumber = "+2349117542774"
+    const phoneNumber = "+2349022720268"
     const message = "Hello SmartTech Academy! I'm interested in your courses."
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
     window.open(url, "_blank")
