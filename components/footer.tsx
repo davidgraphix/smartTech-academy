@@ -25,7 +25,7 @@ export function Footer() {
             <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <MessageCircle className="h-4 w-4" />
-                <Link href="https://wa.me/+234911754 2774">
+                <Link href="https://wa.me/+2349022720268">
                   <span className="text-sm">WhatsApp Business</span>
                 </Link>
               </div>
