@@ -130,13 +130,7 @@ export function Header() {
                 Contact
               </button>
               <div className="flex flex-col space-y-3 pt-4">
-                <Button
-                  variant="outline"
-                  className="bg-black/60 border-cyan-400 text-cyan-400 hover:bg-cyan-400/20 backdrop-blur-sm"
-                  onClick={() => router.push("/login")}
-                >
-                  Login
-                </Button>
+              
                 <Button
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white"
                   onClick={() => router.push("/enroll")}
